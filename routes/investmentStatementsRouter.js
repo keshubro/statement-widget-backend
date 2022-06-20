@@ -8,7 +8,6 @@ investmentStatementsRouter.route('/')
     .get(authenticate.verifyUser, (req, res, next) => {
         InvestmentStatements.find({})
             .then((statements) => {
-                console.log(req.query.filter);
                 const filter = req.query.filter;
                 let response;
                 switch (filter) {

@@ -11,7 +11,9 @@ var usersRouter = require('./routes/users');
 var accountsRouter = require('./routes/accountsRouter');
 var documentTypeRouter = require('./routes/documentTypesRouter');
 var investmentStatementsRouter = require('./routes/investmentStatementsRouter');
+var quarterlyStatementsRouter = require('./routes/quarterlyStatementsRouter');
 var authRouter = require('./routes/auth.js');
+var documentsRouter = require('./routes/documentsRouter');
 
 const mongoose = require('mongoose');
 const url = "mongodb://localhost:27017/statements";
@@ -100,7 +102,9 @@ app.use('/users', usersRouter);
 app.use('/accounts', accountsRouter);
 app.use('/documentTypes', documentTypeRouter);
 app.use('/investmentStatements', investmentStatementsRouter);
+app.use('/quarterlyStatements', quarterlyStatementsRouter);
 app.use('/auth', authRouter);
+app.use('/documents', documentsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

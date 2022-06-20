@@ -25,6 +25,10 @@ const investmentStatementsSchema = new Schema({
     belongsTo: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
+    },
+    filename: {
+        type: String,
+        required: true
     }
 });
 
